@@ -1,0 +1,44 @@
+.profile-page-container{
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    min-height:400px
+}
+
+
+.profile-page-panel{
+    border-radius: 12px;
+    min-height:100%;
+}
+
+
+.profile-card-container{
+    width:30%;
+}
+
+
+.profile-comments-container{
+    width:60%
+}
+
+.section-nav-bar{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: none;
+}
+
+.page-tab{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: none;
+}
+
