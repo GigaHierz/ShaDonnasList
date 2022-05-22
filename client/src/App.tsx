@@ -76,7 +76,7 @@ function App () {
 
   const [provider, setProvider] = useState()
   const [library, setLibrary] = useState()
-  const [page, setPage] = useState('landin')
+  const [page, setPage] = useState('landing')
 
   //const { active, account, library, connector, activate, deactivate } = useWeb3React()
 
