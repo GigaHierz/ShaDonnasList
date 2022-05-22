@@ -6,14 +6,19 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
+import "./tornadocash/MerkelTreeWithHistory.sol";
+
 /**
  * @title ContributorToken
- * @dev Implements the contributorToken distribution to the Member
+ * @dev Implements the contributorToken distribution to the Conntributors of a DAO
  */
 contract ContributorToken is ERC721, ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
 
-    Counters.Counter private _tokenIdCounter;
+    MerkelTreeWithHistory public tree;
+
+    Counters.Counter private _tokenIdCounterContributor;
+    Counters.Counter private _tokenIdCounterContributorRating;
 
     uint256 public maxSupply;
     address public tokenIssuer;
@@ -39,14 +44,26 @@ contract ContributorToken is ERC721, ERC721URIStorage, Ownable {
         returns (string memory)
     {
         // add non-tranferable function
-        uint256 _tokenId = _tokenIdCounter.current();
-        _tokenIdCounter.increment();
+        uint256 tokenId = _tokenIdCounterContributor.current();
+        _tokenIdCounterContributor.increment();
 
-        _transfer(tokenIssuer, to, _tokenId);
+        _transfer(tokenIssuer, to, tokenId);
 
         // add token to MerkelTree Tornadocash
 
         return "as234sdadfa";
+    }
+
+    function _sendRating(string memory _tokenURI)
+        public
+        returns (string memory)
+    {
+        // require check if  hash in Merkel Tree
+        uint256 tokenId = _tokenIdCounterContributorRating.current();
+        _tokenIdCounterContributorRating.increment();
+        _setTokenURI(tokenId, _tokenURI);
+
+        return tokenURI(tokenId);
     }
 
     function safeMint(
