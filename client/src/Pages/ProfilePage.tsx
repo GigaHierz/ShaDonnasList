@@ -8,7 +8,10 @@ import logo from './logo.svg';
 import ProfileCard from '../components/ProfileCard';
 import ReviewCard from '../components/ReviewCard';
 
+import NFT_1 from '../Data/NFTs/NFT_1.json'
+
 import '../styles/profilepage.css'
+
 
 
 
@@ -32,7 +35,6 @@ const profileProps = { // make sure all required component's inputs/Props keys&t
 
                 <ul>
                     <a><li className={"page-tab" + (viewType=="view"?" active-page-tab":" ") }onClick={()=>setViewType("view")}>view comments</li></a>
-                    <a><li className="page-tab" onClick={()=>setViewType("submit")}>send comments</li></a>
                     <a><li className="page-tab" onClick={()=>setViewType("submit")}>send comments</li></a>
                 </ul>
            
