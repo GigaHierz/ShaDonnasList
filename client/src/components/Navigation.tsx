@@ -37,6 +37,9 @@ function Navigation ({
             >
               <a href='#about'>MetaMask </a>
             </li>
+            <li className='float-right nav-list-item connect-wallet-button'>
+              <a href='https://wallet.testnet.near.org/profile'>Near </a>
+            </li>
             <li
               onClick={() => connectwallet('walletconnect')}
               className='float-right nav-list-item connect-wallet-button'
