@@ -16,11 +16,12 @@ import '../styles/profilepage.css'
 
 
 
-function ProfilePage() {
+function ProfilePage(onCompany:any) {
 
     //state for views
     const [pageType, setPageType] = useState("home");
     const [viewType, setViewType] = useState("profile");
+
 
     //State for review form
     const [inclusiveRating, setInclusiveRating] = useState(0);
@@ -38,8 +39,8 @@ function ProfilePage() {
 
 
     const profileProps = { // make sure all required component's inputs/Props keys&types match
-        companyName: "Company A",
-        description: " Udemy, Inc. is a for-profit massive open online course provider aimed at professional adults and students. It was founded in May 2010 by Eren Bali, Gagan Biyani, and Oktay Caglar."
+        companyName: String(localStorage.getItem("company-name")),
+        description: String(localStorage.getItem("company-description")),
     }
 
     interface ReviewCardProps {

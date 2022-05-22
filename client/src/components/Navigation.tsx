@@ -18,7 +18,7 @@ function Navigation ({
       <ul className='nav-list'>
         <img className='logo' src='/logo.jpg' alt='logo'></img>
         <li className='nav-title-item'>
-          <a href='#home'>ShaDonna's List - Rating The Block</a>
+          <a href='#home'>Rate The Block</a>
         </li>
         {/* <li className="nav-list-item"><a href="#home">Home</a></li>
         <li className="nav-list-item"><a href="#news">News</a></li>

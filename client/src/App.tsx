@@ -77,6 +77,7 @@ function App () {
   const [library, setLibrary] = useState()
   const [page, setPage] = useState("landing")
 
+
   //const { active, account, library, connector, activate, deactivate } = useWeb3React()
 
   useEffect(() => {
@@ -151,7 +152,7 @@ function App () {
 
 
 
-      {page=="landing"?<LandingPage></LandingPage>:<ProfilePage></ProfilePage>
+      {page=="landing"?<LandingPage setPage={setPage} ></LandingPage>:<ProfilePage ></ProfilePage>
 
       }
       

@@ -52,9 +52,9 @@ export default function ProfileCard(props:ProfileProps) {
         <Heading fontSize={'2xl'} fontFamily={'body'}>
           {props.companyName}
         </Heading>
-        <Text fontWeight={600} color={'gray.500'} mb={4}>
+        {/* <Text fontWeight={600} color={'gray.500'} mb={4}>
           @lindsey_jam3s
-        </Text>
+        </Text> */}
         <Text
           textAlign={'center'}
           color={useColorModeValue('gray.700', 'gray.400')}

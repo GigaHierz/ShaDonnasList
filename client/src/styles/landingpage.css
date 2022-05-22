@@ -1,0 +1,15 @@
+.company-card{
+  margin:20px;
+
+}
+
+.company-card:hover{
+  opacity: 0.8;
+  cursor: pointer;
+  
+}
+
+.landing-container{
+  background-color: #faaadb;
+
+}
