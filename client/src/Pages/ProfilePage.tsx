@@ -4,6 +4,7 @@ import { BsFillSquareFill} from 'react-icons/bs';
 
 //import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
+import ratings from '../Data/NFTs/Ratings.json'
 
 import logo from './logo.svg';
 
@@ -20,7 +21,8 @@ import '../styles/profilepage.css'
 function ProfilePage() {
 
 //state for views
-const [viewType, setViewType] = useState("view");
+const [pageType, setPageType] = useState("home");
+const [viewType, setViewType] = useState("profile");
 
 //State for review form
 const [inclusiveRating, setInclusiveRating] = useState(0);
@@ -32,7 +34,7 @@ const [commentText, setCommentText] = useState("");
 const [companyName, setCompanyName] = useState("company A");
 const [companyDescription, setCompanyDescription] = useState("company a description");
 const [companyNFT, setCompanyNFT] = useState("company A NFT");
-const [companyIPFS, setCompanyIPFS] = useState("company A IPFS");
+const [companyIPFS, setCompanyIPFS] = useState("QmUCtmMYriaW5wC9QQxrFsgWUpCLddEVJygeCgAVagdbwL");
 
 
 
@@ -42,6 +44,15 @@ const profileProps = { // make sure all required component's inputs/Props keys&t
     description:" Udemy, Inc. is a for-profit massive open online course provider aimed at professional adults and students. It was founded in May 2010 by Eren Bali, Gagan Biyani, and Oktay Caglar."
 }
 
+interface ReviewCardProps {
+    MappedIPFSHash: string;
+    Hash: string;
+    inclusion: Number;
+    expectations: Number;
+    trustworthy: Number;
+  }
+
+  
 function sendReview(incl:any, exp:any, trust:any, comment:any){
     //TODO: write review to chain
 
@@ -82,7 +93,34 @@ function onCommentInputChange(e:any){
             <div>
                 {viewType == "view"?
                 
-                <ReviewCard></ReviewCard>
+                <div>
+                {
+                    ratings.filter(r => r.MappedIPFSHash == companyIPFS).map(function(rating){
+
+                        var p = {
+                        MappedIPFSHash:rating.MappedIPFSHash,
+                        Hash: rating.Hash,
+                        inclusion: rating.inclusion,
+                        expectations: rating.expectations,
+                        trustworthy: rating.trustworthy
+                        }
+                    
+                        return ( 
+                        <ReviewCard  
+
+                        {...p}
+                        // MappedIPFSHash= {rating.MappedIPFSHash}
+                        // Hash = {rating.Hash}
+                        // inclusion= {rating.inclusion}
+                        // expectations={rating.expectations}
+                        // trustworthy={rating.trustworthy}
+
+   
+                        > </ReviewCard>)
+                    })
+                }
+                </div>
+                
 
                 
                 :

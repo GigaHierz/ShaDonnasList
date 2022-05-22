@@ -13,10 +13,22 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-export default function ReviewCard() {
+
+interface ReviewCardProps {
+  MappedIPFSHash: string;
+  Hash: string;
+  inclusion: string;
+  expectations: string;
+  trustworthy: string;
+}
+
+export default function ReviewCard(props:ReviewCardProps ) {
   return (
     <div className='reviewcard-container'>
-      <h2 className="rating">RATING</h2>
+      <h2 className="rating">{`Inclusion: ${props.inclusion}`}</h2>
+      <h2 className="rating">{`Meets expectations: ${props.expectations}`}</h2>
+      <h2 className="rating">{`Trustworthy: ${props.trustworthy}`}</h2>
+
       <p className="description">description</p>
       <p className="date">date</p>
     </div>

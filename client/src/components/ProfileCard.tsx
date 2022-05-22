@@ -67,7 +67,7 @@ export default function ProfileCard(props:ProfileProps) {
           me in your posts */}
         </Text>
 
-        <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
+        {/* <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
           <Badge
             px={2}
             py={1}
@@ -89,9 +89,9 @@ export default function ProfileCard(props:ProfileProps) {
             fontWeight={'400'}>
             #music
           </Badge>
-        </Stack>
+        </Stack> */}
 
-        <Stack mt={8} direction={'row'} spacing={4}>
+        {/* <Stack mt={8} direction={'row'} spacing={4}>
           <Button
             flex={1}
             fontSize={'sm'}
@@ -118,7 +118,7 @@ export default function ProfileCard(props:ProfileProps) {
             }}>
             Follow
           </Button>
-        </Stack>
+        </Stack> */}
       </Box>
     </Center>
   );
