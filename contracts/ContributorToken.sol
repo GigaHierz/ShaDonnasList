@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-import "./tornadocash/MerkelTreeWithHistory.sol";
+// import "./tornadocash/MerkelTreeWithHistory.sol";
 
 /**
  * @title ContributorToken
@@ -15,7 +15,7 @@ import "./tornadocash/MerkelTreeWithHistory.sol";
 contract ContributorToken is ERC721, ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
 
-    MerkelTreeWithHistory public tree;
+    // MerkelTreeWithHistory public tree;
 
     Counters.Counter private _tokenIdCounterContributor;
     Counters.Counter private _tokenIdCounterContributorRating;
