@@ -33,9 +33,9 @@ function ProfilePage () {
 
   const profileProps = {
     // make sure all required component's inputs/Props keys&types match
-    companyName: 'Company A',
+    companyName: 'The Good Company',
     description:
-      ' Udemy, Inc. is a for-profit massive open online course provider aimed at professional adults and students. It was founded in May 2010 by Eren Bali, Gagan Biyani, and Oktay Caglar.'
+      'The Good company cares about inclusion and accessibility. We believe in fair payment and also to pay people for work that is normaly not valued enough. Like inner work or carework.'
   }
 
   function sendReview (incl: any, exp: any, trust: any, comment: any) {

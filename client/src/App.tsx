@@ -1,6 +1,5 @@
 import React from 'react'
 import { useEffect } from 'react'
-import { ethers } from 'ethers'
 import { useState } from 'react'
 
 import logo from './logo.svg'
@@ -9,8 +8,11 @@ import logo from './logo.svg'
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 //import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { InjectedConnector } from '@web3-react/injected-connector'
+import { Contract, ethers } from 'ethers'
 
+import web3 from 'Web3'
 import { useWeb3React } from '@web3-react/core'
+import Membership from './contracts/Membership.sol/Membership.json'
 
 // import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
 // import WalletConnect from "@walletconnect/web3-provider";
@@ -20,13 +22,19 @@ import { useWeb3React } from '@web3-react/core'
 import Navigation from './components/Navigation'
 import ProfilePage from './Pages/ProfilePage'
 import ProfileCard from './components/ProfileCard'
-
 import './App.css'
+
+const address = '0xa5f9A25D85591EA98983337BAc94030674949A8E'
+
+const abi = Membership.abi
+const provider = ethers.providers.getDefaultProvider('rinkeby')
+
+const contract = new ethers.Contract(address, abi, provider)
 
 const CoinbaseWallet = new WalletLinkConnector({
   url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
-  appName: 'Web3-react Demo',
-  supportedChainIds: [1, 3, 4, 5, 42]
+  appName: 'Rate the Block',
+  supportedChainIds: [1, 3, 4, 5, 42, 80001]
 })
 
 //  const WalletConnect = new WalletConnectConnector({
@@ -36,7 +44,7 @@ const CoinbaseWallet = new WalletLinkConnector({
 //  });
 
 const Injected = new InjectedConnector({
-  supportedChainIds: [1, 3, 4, 5, 42]
+  supportedChainIds: [1, 3, 4, 5, 42, 80001]
 })
 
 //  export const providerOptions = {
@@ -70,6 +78,15 @@ function App () {
 
   useEffect(() => {
     localStorage.clear()
+
+    // const callPromise = contract.getValue()
+
+    // callPromise.then(function (result: any) {
+    //   console.log('Positional argument [0]; author:   ' + result[0])
+    //   console.log('Positional argument [1]; value:    ' + result[1])
+    //   console.log('Keyword argument [author]; author: ' + result.author)
+    //   console.log('Keyword argument [value]; value:   ' + result.value)
+    // })
 
     //function to connect wallet when the page loads
     const connectWalletOnPageLoad = async () => {
