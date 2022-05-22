@@ -10,7 +10,7 @@
   background-color: #00c2cb;
   border-radius: 12px;
   min-height: 100%;
-
+  
   padding-bottom: 20px;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .profile-comments-container {
-  width: 60%;
+  /* width: 60%; */
 }
 
 .section-nav-bar {
@@ -96,6 +96,14 @@ a .page-tab:hover {
   display: block;
   text-align: left;
   width: 100%;
+}
+
+.question-container {
+  background-color: #ffc157;
+  border-radius: 12px;
+
+  margin:20px;
+  
 }
 
 .question-block-title {
