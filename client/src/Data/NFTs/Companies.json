@@ -1,0 +1,26 @@
+
+
+[{
+    "name": "good company",
+    "description": "A bootcamp that teaches you EVERYTHING",
+    "ipfsHash": "QmUCtmMYriaW5wC9QQxrFsgWUpCLddEVJygeCgAVagdbwL",
+    "ID": 1
+},
+{
+    "name": "okay company",
+    "description": "A bootcamp that teaches you SOMETHING",
+    "ipfsHash": "QmcEaMgXP4vcM5jBFZ7XjMR2ZZVnv7ofqhTuQ4CtysyahfL",
+    "ID": 1
+},
+{
+    "name": "bad company",
+    "description": "A bootcamp that teaches you NOTHING",
+    "ipfsHash": "QmQTD8HHAb56juapXnRaHUSprCDsBPSJxLfFQT2w8sDREm",
+    "ID": 1
+}]
+
+
+
+
+
+  
