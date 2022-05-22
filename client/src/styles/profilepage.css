@@ -68,3 +68,48 @@ a .page-tab:hover{
   }
 
   
+
+  .add-comment-text{
+      text-align: left;
+      float: left;
+      width: 80%;
+      height:80px;
+
+  }
+
+  .rating-box{
+
+      margin: 3px;
+      float: left;
+  }
+
+  .question-block{
+      display: block;
+      text-align: left;
+      width: 100%;
+  }
+
+  .question-block-title{
+    display: block;
+  }
+
+  .question-block-stars{
+      display: block;
+  }
+
+  .send-review{
+    background-color: #04AA6D;
+    color: white;
+    border-radius: 12px;
+    margin-right: 20px;
+    padding: 8px 12px;
+    margin-top: 14px;
+    float: left;
+  }
+
+  .send-review:hover{
+    background-color: #093c29!important;
+    cursor: pointer;
+}
+
+
