@@ -3,45 +3,58 @@
     
     {"MappedIPFSHash": "QmUCtmMYriaW5wC9QQxrFsgWUpCLddEVJygeCgAVagdbwL",
     "Hash": "QmUCtmMYriaW5wC9QQxrFsgWUpCLddEVJygeCgAVagdbwa",
-      "inclusion": "5",
-      "expectations": "5",
-      "trustworthy": "5"
+      "inclusion": "4",
+      "expectations": "4",
+      "trustworthy": "5",
+      "description": "One of the most welcoming organizations I've attended. They were very supportive the whole time."
     },
     {"MappedIPFSHash": "QmUCtmMYriaW5wC9QQxrFsgWUpCLddEVJygeCgAVagdbwL",
         "Hash": "QmUCtmMYriaW5wC9QQxrFsgWUpCLddEVJygeCgAVagdbwb",
           "inclusion": "5",
           "expectations": "5",
-          "trustworthy": "5"
+          "trustworthy": "5",
+          "description": "10 out of 10 would recommend, I made an error with my wallet and they showed a lot of integrity in helping me deal with this problem."
         },
         {"MappedIPFSHash": "QmUCtmMYriaW5wC9QQxrFsgWUpCLddEVJygeCgAVagdbwL",
             "Hash": "QmUCtmMYriaW5wC9QQxrFsgWUpCLddEVJygeCgAVagdbwc",
-              "inclusion": "5",
+              "inclusion": "3",
               "expectations": "5",
-              "trustworthy": "5"
+              "trustworthy": "5",
+              "description": "The organization was great, and had tools to support a wide range of people, however I think my specfic needs were not fully supported."
+
             },
     {"MappedIPFSHash": "QmcEaMgXP4vcM5jBFZ7XjMR2ZZVnv7ofqhTuQ4CtysyahfL",
         "Hash": "QmcEaMgXP4vcM5jBFZ7XjMR2ZZVnv7ofqhTuQ4Ctysyahfa",
             "inclusion": "5",
             "expectations": "5",
-            "trustworthy": "5"
+            "trustworthy": "5",
+            "description": "The organization was great, and had tools to support a wide range of people, however I think my specfic needs were not fully supported."
+
+            
         },
         {"MappedIPFSHash": "QmcEaMgXP4vcM5jBFZ7XjMR2ZZVnv7ofqhTuQ4CtysyahfL",
             "Hash": "QmcEaMgXP4vcM5jBFZ7XjMR2ZZVnv7ofqhTuQ4Ctysyahfb",
               "inclusion": "5",
               "expectations": "5",
-              "trustworthy": "5"
+              "trustworthy": "5",
+              "description": "The organization was great, and had tools to support a wide range of people, however I think my specfic needs were not fully supported."
+
             },
             {"MappedIPFSHash": "QmcEaMgXP4vcM5jBFZ7XjMR2ZZVnv7ofqhTuQ4CtysyahfL",
                 "Hash": "QmcEaMgXP4vcM5jBFZ7XjMR2ZZVnv7ofqhTuQ4Ctysyahfc",
                   "inclusion": "5",
                   "expectations": "5",
-                  "trustworthy": "5"
+                  "trustworthy": "5",
+                  "description": "The organization was great, and had tools to support a wide range of people, however I think my specfic needs were not fully supported."
+    
                 },
                 {"MappedIPFSHash": "QmQTD8HHAb56juapXnRaHUSprCDsBPSJxLfFQT2w8sDREm",
                     "Hash": "QmQTD8HHAb56juapXnRaHUSprCDsBPSJxLfFQT2w8sDREa",
                       "inclusion": "5",
                       "expectations": "5",
-                      "trustworthy": "5"
+                      "trustworthy": "5",
+                      "description": "The organization was great, and had tools to support a wide range of people, however I think my specfic needs were not fully supported."
+        
                     }
   
 ]
