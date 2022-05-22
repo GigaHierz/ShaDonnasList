@@ -19,11 +19,21 @@ import '../styles/profilepage.css'
 
 function ProfilePage() {
 
+//state for views
 const [viewType, setViewType] = useState("view");
+
+//State for review form
 const [inclusiveRating, setInclusiveRating] = useState(0);
 const [expectationsRating, setExpectationsRating] = useState(0);
 const [trustRating, setTrustRating] = useState(0);
 const [commentText, setCommentText] = useState("");
+
+//State for company details
+const [companyName, setCompanyName] = useState("company A");
+const [companyDescription, setCompanyDescription] = useState("company a description");
+const [companyNFT, setCompanyNFT] = useState("company A NFT");
+const [companyIPFS, setCompanyIPFS] = useState("company A IPFS");
+
 
 
 
@@ -33,8 +43,19 @@ const profileProps = { // make sure all required component's inputs/Props keys&t
 }
 
 function sendReview(incl:any, exp:any, trust:any, comment:any){
-    //TODO: contract call
-    console.log(incl, exp, trust,comment)
+    //TODO: write review to chain
+
+    //TODO: validate NFT matches company token
+}
+
+function setContractDetails(){
+    //TODO: contract call NFT details
+
+    setCompanyName("TODO")
+    setCompanyDescription("TODO")
+    setCompanyNFT("TODO")
+    setCompanyIPFS("TODO")
+
 }
 
 function onCommentInputChange(e:any){
