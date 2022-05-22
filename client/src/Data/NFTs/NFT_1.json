@@ -1,7 +1,18 @@
 {
-    "name":"JJ's bootcamp",
-    "description":"A bootcamp that teaches you EVERYTHING",
-    "IPFS Hash":"QmQEDgUZyi9JYp2A1fKNWsn2N3zRWeexEtMTbKwmYm3UCu",
-    "ID": 1
-    
+  "name": "good company",
+  "description": "A bootcamp that teaches you EVERYTHING",
+  "IPFS Hash": "QmQEDgUZyi9JYp2A1fKNWsn2N3zRWeexEtMTbKwmYm3UCu",
+  "ID": 1,
+  "rating": {
+    "1": {
+      "inclusion": "5",
+      "expectations": "5",
+      "trustworthy": "5"
+    },
+    "2": {
+      "inclusion": "4",
+      "expectations": "5",
+      "trustworthy": "5"
+    }
+  }
 }

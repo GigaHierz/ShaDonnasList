@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './logo.svg'
+import logo from './logo.png'
 import '../styles/navigation.css'
 
 interface NavigationProps {
@@ -16,6 +16,7 @@ function Navigation ({
   return (
     <div>
       <ul className='nav-list'>
+        <img className='logo' src='/logo.jpg' alt='logo'></img>
         <li className='nav-title-item'>
           <a href='#home'>ShaDonna's List - Rating The Block</a>
         </li>
@@ -28,13 +29,17 @@ function Navigation ({
               onClick={() => connectwallet('coinbase')}
               className='float-right nav-list-item connect-wallet-button'
             >
-              <a href='#about'>Connect Coinbase Wallet</a>
+              <a href='#about'>
+                <img src='/coinbase2.png' alt='coinbase logo'></img>
+              </a>
             </li>
             <li
               onClick={() => connectwallet('walletconnect')}
               className='float-right nav-list-item connect-wallet-button'
             >
-              <a href='#about'>Connect Metamask Wallet</a>
+              <a href='#about'>
+                <img src='/metamask.png' alt='mm logo'></img>
+              </a>
             </li>
           </div>
         ) : (

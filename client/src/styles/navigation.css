@@ -1,69 +1,73 @@
 .nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px 0;
-    overflow: hidden;
-    background-color: white;
-    color: black;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.logo {
+  margin-left: 30px;
+  width: 70px;
+  height: 70px;
 }
 
 .nav-list-item {
-    float: left;
+  float: left;
 }
 
-.nav-list-item{
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+.nav-list-item {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 .nav-list-item:hover:not(.active) {
-    background-color: #111;
+  /* background-color: #111; */
 }
 
 .active {
-    background-color: #04AA6D;
+  background-color: #04aa6d;
 }
 
-.float-right{
-    float: right;
+.float-right {
+  float: right;
 }
 
-.connect-wallet-button{
-    background-color: #04AA6D;
-    color: white;
-    border-radius: 12px;
-    margin-right: 20px;
-    padding: 8px 12px;
-    margin-top: 14px;
-
+.connect-wallet-button {
+  color: white;
 }
 
-.connect-wallet-button:hover{
-    background-color: #093c29!important;
+.connect-wallet-button:hover {
+  /* background-color: #093c29 !important; */
+  color: white;
 }
 
-.disconnect-wallet-button{
-    background-color: #224b3c;
-    color: white;
-    border-radius: 12px;
-    margin-right: 20px;
-    padding: 8px 12px;
-
+.disconnect-wallet-button {
+  background-color: #224b3c;
+  color: white;
+  border-radius: 12px;
+  margin-right: 20px;
+  padding: 8px 12px;
 }
 
-.disconnect-wallet-button:hover{
-    background-color: #3b413f!important;
+.disconnect-wallet-button:hover {
+  background-color: #3b413f !important;
 }
 
-.nav-title-item{
-    font-weight: 800;
-    font-size: 30px;
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    float: left;
-    margin-left: 40px;
+.nav-title-item {
+  font-weight: 800;
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  float: left;
+  margin-left: 40px;
 }
