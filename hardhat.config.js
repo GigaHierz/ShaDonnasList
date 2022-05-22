@@ -31,5 +31,9 @@ module.exports = {
         `b6a061881268c9cb337b79484816e6187d63850d10c48e39990c5a3ea360be0d`
       ]
     }
+  },
+
+  fallback: {
+    util: require.resolve('util/')
   }
 }

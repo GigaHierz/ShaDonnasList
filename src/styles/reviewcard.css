@@ -1,0 +1,24 @@
+
+.reviewcard-container{
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 5px 30px;
+    max-width: 80%;
+    font-family: Helvetica, Arial, sans-serif, "Palatino Linotype","Book Antiqua",Palatino,serif;
+    font-family: "Work Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+ 
+}
+
+.rating{
+    color:rgb(32, 147, 32);
+    font-weight: 800;
+}
+.description{
+    
+}
+
+.date{
+    font-weight: 200;
+}
