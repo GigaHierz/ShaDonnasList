@@ -29,17 +29,13 @@ function Navigation ({
               onClick={() => connectwallet('coinbase')}
               className='float-right nav-list-item connect-wallet-button'
             >
-              <a href='#about'>
-                <img src='/coinbase2.png' alt='coinbase logo'></img>
-              </a>
+              <a href='#about'>MetaMask</a>
             </li>
             <li
               onClick={() => connectwallet('walletconnect')}
               className='float-right nav-list-item connect-wallet-button'
             >
-              <a href='#about'>
-                <img src='/metamask.png' alt='mm logo'></img>
-              </a>
+              <a href='#about'>Coinbase </a>
             </li>
           </div>
         ) : (
@@ -47,7 +43,7 @@ function Navigation ({
             onClick={disconnectwallet}
             className='float-right nav-list-item disconnect-wallet-button'
           >
-            <a href='#about'>Disconnect Waller</a>
+            <a href='#about'>Disconnect Wallet</a>
           </li>
         )}
 

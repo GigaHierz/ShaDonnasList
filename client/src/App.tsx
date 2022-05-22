@@ -122,11 +122,11 @@ function App () {
         disconnectwallet={disconnect}
         active={active}
       ></Navigation>
-      <button onClick={connect}>Coinbase Wallet</button>
+      {/* <button onClick={connect}>Coinbase Wallet</button>
       <button onClick={deactivate}>Disconnect</button>
       <div>{`Connection Status: ${active}`}</div>
       <div>{`Account: ${account}`}</div>
-      <div>{`Network ID: ${chainId}`}</div>
+      <div>{`Network ID: ${chainId}`}</div> */}
 
       <ProfilePage></ProfilePage>
     </div>
