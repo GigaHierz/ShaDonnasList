@@ -150,9 +150,9 @@ function App () {
       <div>{`Network ID: ${chainId}`}</div> */}
 
       {page == 'landing' ? (
-        <LandingPage></LandingPage>
+        <LandingPage setPage={setPage}></LandingPage>
       ) : (
-        <ProfilePage contract={contract} provider={provider}></ProfilePage>
+        <ProfilePage></ProfilePage>
       )}
     </div>
   )

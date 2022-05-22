@@ -1,22 +1,31 @@
 
 
 [{
-    "name": "Good Company",
-    "description": "A bootcamp that teaches you EVERYTHING",
+    "name": "Johnson Technologies",
+    "description": "An American company that operates a cryptocurrency exchange platform. This is a distributed company; all employees operate via remote work and the company lacks a physical headquarters. It is the largest cryptocurrency exchange in the United States by trading volume. ",
     "ipfsHash": "QmUCtmMYriaW5wC9QQxrFsgWUpCLddEVJygeCgAVagdbwL",
-    "ID": 1
+    "ID": 1,
+    "inc":5,
+    "exc":3,
+    "trust":5
 },
 {
-    "name": "Okay Company",
-    "description": "A bootcamp that teaches you SOMETHING",
-    "ipfsHash": "QmcEaMgXP4vcM5jBFZ7XjMR2ZZVnv7ofqhTuQ4CtysyahfL",
-    "ID": 1
+    "name": "Dx Bootcamps",
+    "description": "A bootcamp that teaches you everything. A for-profit massive open online course provider aimed at professional adults and students. It was founded in May 2010 by Eren Bali, Gagan Biyani, and Oktay Caglar.",
+    "ipfsHash": "QmcEaMgXP4vcM5jBFZ7XjMR2ZZVnv7ofqhTuQ4Ctysyahf",
+    "ID": 1,
+    "inc":5,
+    "exc":4,
+    "trust":5
 },
 {
-    "name": "Bad Company",
-    "description": "A bootcamp that teaches you NOTHING",
+    "name": "BNPL by Franco & Co.",
+    "description": "Doing BNPL the right way. We provide simple, personalized payment, lending and saving solutions. We’re a tech-forward financial services company. We're a tech-forward financial services company. We provide simple, personalized payment, lending and saving solutions.",
     "ipfsHash": "QmQTD8HHAb56juapXnRaHUSprCDsBPSJxLfFQT2w8sDREm",
-    "ID": 1
+    "ID": 1,
+    "inc":3,
+    "exc":5,
+    "trust":3
 }]
 
 

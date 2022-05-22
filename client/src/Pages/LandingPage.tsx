@@ -8,11 +8,20 @@ import {
   Icon,
   IconProps,
 } from '@chakra-ui/react';
+import { local } from 'web3modal';
 
 import CompanyCard from '../components/CompanyCard'
+import companies from '../Data/NFTs/Companies.json'
 
-export default function CallToActionWithIllustration() {
+import '../styles/landingpage.css'
+
+interface landingProps{
+
+    setPage: (params:any) =>any;
+}
+export default function CallToActionWithIllustration({setPage}:landingProps) {
   return (
+    <div className="landing-container">
     <Container maxW={'5xl'}>
       <Stack
         textAlign={'center'}
@@ -21,19 +30,18 @@ export default function CallToActionWithIllustration() {
         py={{ base: 20, md: 28 }}>
         <Heading
           fontWeight={600}
+          color={'white'}
           fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
           lineHeight={'110%'}>
-          Meeting scheduling{' '}
-          <Text as={'span'} color={'orange.400'}>
-            made easy
+          Creating a Web3 Community of{' '}
+          <Text as={'span'} color={'pink.500'}>
+            Trust
           </Text>
         </Heading>
-        <Text color={'gray.500'} maxW={'3xl'}>
-          Never miss a meeting. Never be late for one too. Keep track of your
-          meetings and receive smart reminders in appropriate times. Read your
-          smart “Daily Agenda” every morning.
+        <Text color={'black'} maxW={'3xl'}>
+          Rate the block puts customer feedback on the chain to create visibility of the values and standards held by companies. We beleive that by holding businesses accountable to how they treat their customers we can steer people away from uninclusive enviroments.
         </Text>
-        <Stack spacing={6} direction={'row'}>
+        {/* <Stack spacing={6} direction={'row'}>
           <Button
             rounded={'full'}
             px={6}
@@ -45,42 +53,52 @@ export default function CallToActionWithIllustration() {
           <Button rounded={'full'} px={6}>
             Learn more
           </Button>
-        </Stack>
+        </Stack> */}
         <Flex w={'full'}>
 
-            {/* {
-                 ratings.filter(r => r.MappedIPFSHash == companyIPFS).map(function (rating) {
+        {
+                                    companies.map(function (company) {
 
-                    var p = {
-                        MappedIPFSHash: rating.MappedIPFSHash,
-                        Hash: rating.Hash,
-                        inclusion: rating.inclusion,
-                        expectations: rating.expectations,
-                        trustworthy: rating.trustworthy,
-                        description: rating. description
-                    }
+                                        var p = {
+                                            name: company.name,
+                                            description: company.description,
+                                            ipfshash: company.ipfsHash
+                                            
+                                        }
 
-                    return (
+                                        return (
+                                            <div onClick={()=>{
+                                                localStorage.setItem("company-name", company.name)
+                                                localStorage.setItem("company-hash", company.ipfsHash)
+                                                localStorage.setItem("company-description", company.description)
+                                                console.log(localStorage.getItem("company-name"))
 
-                        <ReviewCard
+                                                setPage("not-landing");
 
-                            {...p}
-                        // MappedIPFSHash= {rating.MappedIPFSHash}
-                        // Hash = {rating.Hash}
-                        // inclusion= {rating.inclusion}
-                        // expectations={rating.expectations}
-                        // trustworthy={rating.trustworthy}
+                                            }} className='company-card'>
+                                            <CompanyCard
+                                            
+
+                                                {...p}
+                                                
+                                            // MappedIPFSHash= {rating.MappedIPFSHash}
+                                            // Hash = {rating.Hash}
+                                            // inclusion= {rating.inclusion}
+                                            // expectations={rating.expectations}
+                                            // trustworthy={rating.trustworthy}
 
 
-                        > </ReviewCard>)
-                })
-            } */}
+                                            > </CompanyCard>
+                                            </div>)
+                                    })
+                                }
 
             
          
         </Flex>
       </Stack>
     </Container>
+    </div>
   );
 }
 

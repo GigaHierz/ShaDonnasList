@@ -23,6 +23,8 @@ function ProfilePage ({
   //state for views
 
   const { account } = useEthers()
+
+  //state for views
   const [pageType, setPageType] = useState('home')
   const [viewType, setViewType] = useState('profile')
 
@@ -44,9 +46,8 @@ function ProfilePage ({
 
   const profileProps = {
     // make sure all required component's inputs/Props keys&types match
-    companyName: 'Company A',
-    description:
-      ' Udemy, Inc. is a for-profit massive open online course provider aimed at professional adults and students. It was founded in May 2010 by Eren Bali, Gagan Biyani, and Oktay Caglar.'
+    companyName: String(localStorage.getItem('company-name')),
+    description: String(localStorage.getItem('company-description'))
   }
 
   interface ReviewCardProps {
@@ -78,6 +79,11 @@ function ProfilePage ({
     )
   }
 
+  function sendReview (incl: any, exp: any, trust: any, comment: any) {
+    //TODO: write review to chain
+    //TODO: validate NFT matches company token
+  }
+
   function setContractDetails () {
     //TODO: contract call NFT details
 
@@ -90,6 +96,7 @@ function ProfilePage ({
   function onCommentInputChange (e: any) {
     setCommentText(e.target.value)
   }
+
   return (
     <div className='profile-page-container'>
       <div className='profile-page-panel profile-card-container'>
@@ -202,7 +209,6 @@ function ProfilePage ({
                   </div>
                 </div>
                 <br />
-
                 <div className='question-block'>
                   <h3>
                     Did this organization meet expectations of what they

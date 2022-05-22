@@ -58,23 +58,24 @@ export default function ProductSimple(props:CompanyCardProps) {
             height={230}
             width={282}
             objectFit={'cover'}
-            src={IMAGE}
+            src={`https://demo.storj-ipfs.com/ipfs/${props.ipfshash}`}
           />
         </Box>
         <Stack pt={10} align={'center'}>
-          <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
-            Brand
-          </Text>
+         
           <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-            Nice Chair, pink
+            {props.name}
           </Heading>
+          <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
+            {props.description}
+          </Text>
           <Stack direction={'row'} align={'center'}>
-            <Text fontWeight={800} fontSize={'xl'}>
+            {/* <Text fontWeight={800} fontSize={'xl'}>
               $57
-            </Text>
-            <Text textDecoration={'line-through'} color={'gray.600'}>
+            </Text> */}
+            {/* <Text textDecoration={'line-through'} color={'gray.600'}>
               $199
-            </Text>
+            </Text> */}
           </Stack>
         </Stack>
       </Box>
