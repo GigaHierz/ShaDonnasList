@@ -17,7 +17,7 @@ jobs:
 
       - run: cd client
       - run: npm install
-      - run: npm build
+      - run: npm run-script build
 
       - name: "Deploy to Skynet"
         uses: SkynetLabs/deploy-to-skynet-action@v2
