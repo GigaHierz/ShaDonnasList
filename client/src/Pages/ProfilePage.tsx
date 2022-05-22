@@ -79,11 +79,6 @@ function ProfilePage ({
     )
   }
 
-  function sendReview (incl: any, exp: any, trust: any, comment: any) {
-    //TODO: write review to chain
-    //TODO: validate NFT matches company token
-  }
-
   function setContractDetails () {
     //TODO: contract call NFT details
 

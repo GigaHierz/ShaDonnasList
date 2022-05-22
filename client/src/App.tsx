@@ -152,7 +152,7 @@ function App () {
       {page == 'landing' ? (
         <LandingPage setPage={setPage}></LandingPage>
       ) : (
-        <ProfilePage></ProfilePage>
+        <ProfilePage contract={contract} provider={provider}></ProfilePage>
       )}
     </div>
   )
