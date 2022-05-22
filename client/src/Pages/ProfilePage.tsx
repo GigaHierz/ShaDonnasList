@@ -31,8 +31,9 @@ const profileProps = { // make sure all required component's inputs/Props keys&t
             <div className="section-nav-bar">
 
                 <ul>
-                    <li className="page-tab" onClick={()=>setViewType("view")}>view comments</li>
-                    <li className="page-tab" onClick={()=>setViewType("submit")}>send comments</li>
+                    <a><li className={"page-tab" + (viewType=="view"?" active-page-tab":" ") }onClick={()=>setViewType("view")}>view comments</li></a>
+                    <a><li className="page-tab" onClick={()=>setViewType("submit")}>send comments</li></a>
+                    <a><li className="page-tab" onClick={()=>setViewType("submit")}>send comments</li></a>
                 </ul>
            
             </div>
