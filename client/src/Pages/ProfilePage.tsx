@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { BsFillSquareFill } from 'react-icons/bs'
-
+import { useEthers } from '@usedapp/core'
 //import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
 import ratings from '../Data/NFTs/Ratings.json'
@@ -13,8 +13,16 @@ import NFT_1 from '../Data/NFTs/NFT_1.json'
 
 import '../styles/profilepage.css'
 
-function ProfilePage () {
+function ProfilePage ({
+  contract,
+  provider
+}: {
+  contract: any
+  provider: any
+}) {
   //state for views
+
+  const { account } = useEthers()
   const [pageType, setPageType] = useState('home')
   const [viewType, setViewType] = useState('profile')
 
@@ -52,6 +60,22 @@ function ProfilePage () {
   function sendReview (incl: any, exp: any, trust: any, comment: any) {
     //TODO: write review to chain
     //TODO: validate NFT matches company token
+
+    console.log(contract)
+
+    contract.sendMessage('hallo hallo halloooooo')
+
+    contract?.safeMint(
+      'gigahierz.eth',
+      '00078llb7qp9vlc6g80np3cpl7ng8id0eole9cl5lfaq1au0hu01o3o',
+      'TheGoodCompany',
+      'TGC',
+      10000,
+      {
+        value: 1 * 10e18,
+        from: 'gigahierz.eth'
+      }
+    )
   }
 
   function setContractDetails () {

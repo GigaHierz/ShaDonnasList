@@ -26,7 +26,8 @@ import LandingPage from './Pages/LandingPage'
 import ProfileCard from './components/ProfileCard'
 import './App.css'
 
-const address = '0xa5f9A25D85591EA98983337BAc94030674949A8E'
+// const address = '0xa5f9A25D85591EA98983337BAc94030674949A8E'
+const address = '0x35dEC8Ad2CD62745203dDB8d796d6dc9F9c31B6D'
 
 const abi = Membership.abi
 const provider = ethers.providers.getDefaultProvider('rinkeby')
@@ -75,7 +76,7 @@ function App () {
 
   const [provider, setProvider] = useState()
   const [library, setLibrary] = useState()
-  const [page, setPage] = useState('landing')
+  const [page, setPage] = useState('landin')
 
   //const { active, account, library, connector, activate, deactivate } = useWeb3React()
 
@@ -151,7 +152,7 @@ function App () {
       {page == 'landing' ? (
         <LandingPage></LandingPage>
       ) : (
-        <ProfilePage></ProfilePage>
+        <ProfilePage contract={contract} provider={provider}></ProfilePage>
       )}
     </div>
   )

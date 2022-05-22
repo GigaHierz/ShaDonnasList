@@ -15,10 +15,16 @@ import "./Factory.sol";
 contract Membership is ERC721, ERC721URIStorage, Ownable {
     Factory public f;
 
+    string[] messages;
+
     constructor() ERC721("ShaDonna", "SDL") {}
 
     uint256 public constant maxSupply = 10000;
     uint256 private _price = 0.01 ether;
+
+    function sendMessage(string memory message) public {
+        messages.push(message);
+    }
 
     function safeMint(
         address to,

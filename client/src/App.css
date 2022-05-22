@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #ff66c4;
 }
 
 .App-logo {
@@ -24,7 +25,7 @@
   color: white;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext");
 
 .App-link {
   color: #61dafb;
@@ -39,12 +40,9 @@
   }
 }
 
-
-.rounded-button{
+.rounded-button {
   padding: 8px;
   border-radius: 8px;
   margin: 3px;
   background-color: green;
 }
-
-

@@ -29,13 +29,19 @@ function Navigation ({
               onClick={() => connectwallet('coinbase')}
               className='float-right nav-list-item connect-wallet-button'
             >
-              <a href='#about'>MetaMask</a>
+              <a href='#about'>Coinbase</a>
             </li>
             <li
               onClick={() => connectwallet('walletconnect')}
               className='float-right nav-list-item connect-wallet-button'
             >
-              <a href='#about'>Coinbase </a>
+              <a href='#about'>MetaMask </a>
+            </li>
+            <li
+              onClick={() => connectwallet('walletconnect')}
+              className='float-right nav-list-item connect-wallet-button'
+            >
+              <a href='#about'>Near</a>
             </li>
           </div>
         ) : (
