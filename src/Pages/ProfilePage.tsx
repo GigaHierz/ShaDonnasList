@@ -40,17 +40,8 @@ const profileProps = { // make sure all required component's inputs/Props keys&t
            
             </div>
             <div>
-                {viewType == "view"?
-                
+                {viewType == "view"?"":""}
                 <ReviewCard></ReviewCard>
-
-                
-                :
-
-
-                
-                
-                ""}
 
             </div>
 
