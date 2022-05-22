@@ -20,6 +20,7 @@ interface ReviewCardProps {
   inclusion: string;
   expectations: string;
   trustworthy: string;
+  description:string;
 }
 
 export default function ReviewCard(props:ReviewCardProps ) {
@@ -29,8 +30,8 @@ export default function ReviewCard(props:ReviewCardProps ) {
       <h2 className="rating">{`Meets expectations: ${props.expectations}`}</h2>
       <h2 className="rating">{`Trustworthy: ${props.trustworthy}`}</h2>
 
-      <p className="description">description</p>
-      <p className="date">date</p>
+      <p className="description">{props.description}</p>
+      {/* <p className="date">date</p> */}
     </div>
   );
 }

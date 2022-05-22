@@ -21,6 +21,8 @@ import Membership from './contracts/Membership.sol/Membership.json'
 
 import Navigation from './components/Navigation'
 import ProfilePage from './Pages/ProfilePage'
+import LandingPage from './Pages/LandingPage'
+
 import ProfileCard from './components/ProfileCard'
 import './App.css'
 
@@ -73,6 +75,7 @@ function App () {
 
   const [provider, setProvider] = useState()
   const [library, setLibrary] = useState()
+  const [page, setPage] = useState("landing")
 
   //const { active, account, library, connector, activate, deactivate } = useWeb3React()
 
@@ -145,7 +148,13 @@ function App () {
       <div>{`Account: ${account}`}</div>
       <div>{`Network ID: ${chainId}`}</div> */}
 
-      <ProfilePage></ProfilePage>
+
+
+
+      {page=="landing"?<LandingPage></LandingPage>:<ProfilePage></ProfilePage>
+
+      }
+      
     </div>
   )
 }

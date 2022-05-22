@@ -95,12 +95,12 @@ function ProfilePage() {
                     </ul>
                 </div>
 
-                <div className="profile-page-panel profile-comments-container">
+                <div className="">
 
                     <div className='question-container'>
                         {viewType == "view" ?
 
-                            <div>
+                            <div> 
                                 {
                                     ratings.filter(r => r.MappedIPFSHash == companyIPFS).map(function (rating) {
 
@@ -109,7 +109,8 @@ function ProfilePage() {
                                             Hash: rating.Hash,
                                             inclusion: rating.inclusion,
                                             expectations: rating.expectations,
-                                            trustworthy: rating.trustworthy
+                                            trustworthy: rating.trustworthy,
+                                            description: rating. description
                                         }
 
                                         return (
@@ -139,7 +140,7 @@ function ProfilePage() {
                                         <BsFillSquareFill onClick={() => setInclusiveRating(5)} color={((inclusiveRating > 4) && (inclusiveRating < 6)) ? "green" : "grey"} className='rating-box' />
 
                                     </div>
-                                </div><br /><br />
+                                </div><br />
 
                                 <div className='question-block'>
                                     <h3>Did this organization meet expectations of what they promised?</h3>
@@ -149,7 +150,7 @@ function ProfilePage() {
                                     <BsFillSquareFill onClick={() => setExpectationsRating(4)} color={((expectationsRating > 3) && (expectationsRating < 6)) ? "green" : "grey"} className='rating-box' />
                                     <BsFillSquareFill onClick={() => setExpectationsRating(5)} color={((expectationsRating > 4) && (expectationsRating < 6)) ? "green" : "grey"} className='rating-box' />
 
-                                </div><br /><br />
+                                </div><br />
 
                                 <div className='question-block'>
                                     <h3 className='question-block-title'>Do you consider this a trustworthy organization?</h3>
@@ -159,7 +160,7 @@ function ProfilePage() {
                                     <BsFillSquareFill onClick={() => setTrustRating(4)} color={((trustRating > 3) && (trustRating < 6)) ? "green" : "grey"} className='rating-box' />
                                     <BsFillSquareFill onClick={() => setTrustRating(5)} color={((trustRating > 4) && (trustRating < 6)) ? "green" : "grey"} className='rating-box' />
 
-                                </div><br /><br />
+                                </div><br />
 
                                 <div className='question-block'>
                                     <h3>comments:</h3>
@@ -168,7 +169,7 @@ function ProfilePage() {
                                         className='add-comment-text'
                                     ></textarea>
 
-                                    <br></br>
+                                    <br/>
 
                                     <div>
                                         <a
